@@ -1,8 +1,8 @@
 # LEAP-CS_Project
 
-The project consist of a synthetic electrical network, where each of its nodes represent the substations of the network. We start with one substation that has suffered of an interruption of its service, and we want to predict which of the other substations also experience an interruption over 24 hours.
+The project consists of a synthetic electrical network, where each of its nodes represent the substations of the network. We start with one substation that has suffered of an interruption of its service, and we want to predict which of the other substations also experience an interruption over 24 hours.
 
-Our central question is *Do direct connectivity and local cross-links add predictive information beyond load and equipment age?*, that is, although our dataset contains information about the load and equipement age of each of the substations, we want to see if adding the spatial structure of the network modifies the results of the prediction of a regression model, that classifies the substations between those that will experience an interruption and those who will not.
+Our central question is *Do direct connectivity and local cross-links add predictive information beyond load and equipment age?*, that is, although our dataset contains information about the load and equipment age of each of the substations, we want to see if adding the spatial structure of the network modifies the results of the prediction of a regression model, that classifies the substations between those that will experience an interruption and those who will not.
 
 The notebook is divided in three parts: in part 1 we load and explore the dataset via some plots. In part 2, we construct the network and start to study and visualize it. Finally, in part 3, we compare the logistic regression without network properties versus a logistic regression with network information, and discuss the results.
 
@@ -15,9 +15,9 @@ When exploring the data of the first dataframe, we can observe that there is a c
 
 ## Part 2: Network
 
-We build an undirected unweighted network via the information on the second dataframe, using only the connections between them. We calculare the degree and clustering coefficient of each of the nodes.
+We build an undirected unweighted network via the information on the second dataframe, using only the connections between them. We calculate the degree and clustering coefficient of each of the nodes.
 
-When visualizing the network, we can see the connections between each substation, or the simulated electric grid. We also plot the local clustering coefficient versus the degree of the nodes, and we observe that at a higher degree, the local clustering tends to aroud 0.33.
+When visualizing the network, we can see the connections between each substation, or the simulated electric grid. We also plot the local clustering coefficient versus the degree of the nodes, and we observe that at a higher degree, the local clustering tends to around 0.33.
 
 ## Part 3: Regression model
 
